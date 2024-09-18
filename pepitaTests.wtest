@@ -1,0 +1,17 @@
+import pepita.*
+
+decribe "Pepon tests"{
+
+  test "Pepon con energia 30 al comer alpiste queda en 40"{
+    piepita.comer(alpiste)
+    assert.equals(40, pepita.energia())
+  }
+    
+  test "Pepon con energia 30 al volar 3km queda con energia 4"{
+    pepita.volar(3)
+    assert.equals(4, pepita.energia())
+  }
+
+
+}
+    
