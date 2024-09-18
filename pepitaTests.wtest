@@ -22,7 +22,7 @@ describe "Roque tests"{
     assert.equals(0, roque.cenas())
   }
   
-test "Roque entranado a Pepon con energia 30 al alimentar el alpiste pepon queda con 40 y cenas es 1"{
+  test "Roque entranado a Pepon con energia 30 al alimentar el alpiste pepon queda con 40 y cenas es 1"{
     roque.ave(pepon)
     roque.alimentar(alpiste)
     assert.equals(40, pepon.energia())
@@ -36,8 +36,22 @@ test "Roque entranado a Pepon con energia 30 al alimentar el alpiste pepon queda
     assert.equals(1, roque.cenas())
   }
 
+}
+
+describe "Milena Movilizar y volar demas"{
+  test "Milena con Pepita y Pepon, no puede movilizar porque pepon no puede volar 6km"{
+    milena.agregarAve(pepita)
+    milena.agregarAve(pepon)
+    assert.notThat(pepon.puedeVolar(6))    
+    
+    assert.throwsException( { milena.movilizar(6) })
+    assert.throwsExceptionWithMessage("No puede movilizar a todas sus aves!", { milena.movilizar(6) })
+
+
+  }
 
 }
+
 
    
    
