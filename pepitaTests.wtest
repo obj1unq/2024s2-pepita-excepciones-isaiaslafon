@@ -1,6 +1,6 @@
 import pepita.*
 
-decribe "Pepon tests"{
+describe "Pepon tests"{
 
   test "Pepon con energia 30 al comer alpiste queda en 40"{
     pepon.comer(alpiste)
@@ -15,7 +15,7 @@ decribe "Pepon tests"{
 
 }
 
-decribe "Roque tests"{
+describe "Roque tests"{
 
   test "Roque alimento 0 veces a su ave a entrenar al principio"{
     roque.ave(pepon)

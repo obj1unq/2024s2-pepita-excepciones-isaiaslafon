@@ -50,11 +50,11 @@ object pepon {
 	}
 		
 	method comer(comida) {
-		energia += energia + comida.energiaQueAporta() / 2
+		energia += comida.energiaQueAporta() / 2
 	}
 		
 	method volar(distancia) {
-		energia = energia - 20 - 2*distancia
+		energia -= 20 + 2 * distancia
 	}
 	
 }
@@ -62,6 +62,10 @@ object pepon {
 object roque {
 	var ave = pepita
 	var cenas = 0;
+	
+	method cenas(){
+		return cenas
+	}
 	
 	method ave(_ave) {
 		ave = _ave
